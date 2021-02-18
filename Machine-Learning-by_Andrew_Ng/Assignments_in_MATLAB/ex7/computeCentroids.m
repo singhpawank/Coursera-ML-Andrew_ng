@@ -25,21 +25,11 @@ centroids = zeros(K, n);
 %
 % Note: You can use a for-loop over the centroids to compute this.
 %
-nk = zeros(K, 1);
 
-for i = 1 : m
-    centroids(idx(i), :) = centroids(idx(i), :) + X(i,:);
-    nk(idx(i)) =  nk(idx(i))+ 1;
-end
-
-for j = 1: K
-    if nk(j) ~= 0
-        centroids(j,:) = centroids(j,:)/nk(j);
-    end
+for i = 1: K
+     centroids(i,:) = mean(X(idx == i), 1);   
 end
 % =============================================================
-% Removing centroid having no points
-centroids = centroids(nk ~= 0,:);
 
 end
 
