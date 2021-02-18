@@ -13,9 +13,7 @@ centroids = zeros(K, size(X, 2));
 %               the dataset X
 %
 
-
-
-
+centroids = datasample(X, K);
 
 
 

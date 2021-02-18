@@ -144,7 +144,7 @@ pause;
 %  If you are applying a machine learning algorithm 
 fprintf('\nDimension reduction for face dataset.\n\n');
 
-K = 100;
+K = 400;
 Z = projectData(X_norm, U, K);
 
 fprintf('The projected data Z has a size of: ')
@@ -160,7 +160,7 @@ pause;
 
 fprintf('\nVisualizing the projected (reduced dimension) faces.\n\n');
 
-K = 100;
+K = 400;
 X_rec  = recoverData(Z, U, K);
 
 % Display normalized data
