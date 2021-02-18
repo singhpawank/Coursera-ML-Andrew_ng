@@ -31,16 +31,15 @@ for i = 1 : m
     centroids(idx(i), :) = centroids(idx(i), :) + X(i,:);
     nk(idx(i)) =  nk(idx(i))+ 1;
 end
-nk = nk(nk ~= 0);
-centroids = centroids(nk ~= 0,:);
-K = size(nk, 1);
+
 for j = 1: K
     if nk(j) ~= 0
         centroids(j,:) = centroids(j,:)/nk(j);
     end
 end
 % =============================================================
-
+% Removing centroid having no points
+centroids = centroids(nk ~= 0,:);
 
 end
 
