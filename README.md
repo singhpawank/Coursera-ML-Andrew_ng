@@ -1,10 +1,10 @@
-# Machine Learning 
+# Coursera Machine Learning 
 * Instructor - Andrew Ng
 
 ## Contents
 1. Lecture slides
 2. Lecture notes
-3. Programming assignments with my solution.
+3. Programming assignments with my solution in MATLAB and python languages.
     * Note :- You should try programming assignments first yourself.
 
 ## References
