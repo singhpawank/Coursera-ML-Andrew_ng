@@ -24,18 +24,6 @@ J = (1/m)*sum(-y.*log(h) - ((1-y).*log(1-h))) + (lambda/(2*m))*((theta(2:end))'*
 grad(1) = (1/m)*((h-y)'*X(:,1));
 grad(2:end) = (1/m)*((X(:,2:end))'*(h-y)) + (lambda/m) *theta(2:end);
 
-
-%z = X * theta;      % m x 1
- % h_x = sigmoid(z);  % m x 1 
-  
- % reg_term = (lambda/(2*m)) * sum(theta(2:end).^2);
-  
-%  J = (1/m)*sum((-y.*log(h_x))-((1-y).*log(1-h_x))) + reg_term; % scalar
-  
- % grad(1) = (1/m)* (X(:,1)'*(h_x-y));                                  % 1 x 1
- % grad(2:end) = (1/m)* (X(:,2:end)'*(h_x-y))+(lambda/m)*theta(2:end);  % n x 1
-  
-
 % =============================================================
 
 end
